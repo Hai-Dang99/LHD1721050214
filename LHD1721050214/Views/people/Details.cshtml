@@ -1,0 +1,26 @@
+﻿@model LHD1721050214.Models.person
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>person</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.PersonID }) |
+    @Html.ActionLink("Quay lại", "Index")
+</p>

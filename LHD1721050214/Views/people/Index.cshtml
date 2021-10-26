@@ -1,0 +1,33 @@
+﻿@model IEnumerable<LHD1721050214.Models.person>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonName)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.PersonID }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.PersonID }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.PersonID })
+        </td>
+    </tr>
+}
+
+</table>
